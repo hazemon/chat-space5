@@ -1,11 +1,9 @@
-## messagesテーブル
-
 |Column|Type|Options|
 |------|----|-------|
-|body|text|null: false, foreign_key: true|
-|image|string|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
-|user_id|integer|null: false, foreign_key: true|
+|body|text|
+|image|string|
+|group_id|integer|null: false, foreign_key: true|
+|user_id|integer|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :group
@@ -15,23 +13,23 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|name|string|null: false, foreign_key: true|
+|name|string|
 |E-mail|string|null: false, foreign_key: true|
 
 ### Association
 - has_many :groups :through :groups_users
 - has_many :groups_users
-- has-many :massages
+- has-many :messages
 
 ### groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|name|string|null: false, foreign_key: true|
+|name|string|
 
 ### Association
 - has_many :users :through :groups_users
 - has_many :groups_users
-- has-many :massages
+- has_many :messages
 
 
 ## groups_usersテーブル
