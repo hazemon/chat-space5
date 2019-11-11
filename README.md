@@ -4,8 +4,8 @@
 |------|----|-------|
 |body|text|
 |image|string|
-|group_id|integer|
-|user_id|integer|
+|group_id|integer|null: false, foreign_key: true|
+|user_id|integer|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :group
@@ -15,7 +15,7 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|name|string|null: false, foreign_key: true|
+|name|string|
 |E-mail|string|null: false, foreign_key: true|
 
 ### Association
